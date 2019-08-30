@@ -1,0 +1,785 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="HMMSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AUL">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Zone_Code" Type="varchar" MaxLength="13" />
+          <Property Name="Zone_Description" Type="varchar" MaxLength="256" />
+          <Property Name="NSN" Type="varchar" MaxLength="15" />
+          <Property Name="Item_Name" Type="varchar" MaxLength="256" />
+          <Property Name="Trade_Name" Type="varchar" MaxLength="256" />
+          <Property Name="Manufacturer_Part_Number" Type="varchar" MaxLength="256" />
+          <Property Name="Product_MSDS_Number" Type="varchar" MaxLength="13" />
+          <Property Name="MSDS_Prep_Date" Type="varchar" MaxLength="22" />
+          <Property Name="Authorization_Expiration_Date" Type="varchar" MaxLength="22" />
+          <Property Name="Update_Date" Type="varchar" MaxLength="22" />
+          <Property Name="Active" Type="varchar" MaxLength="1" />
+          <Property Name="CAGE_Code" Type="varchar" MaxLength="5" />
+          <Property Name="Updated_By" Type="varchar" MaxLength="256" />
+          <Property Name="Building_Code" Type="varchar" MaxLength="13" />
+          <Property Name="Update_Date_2" Type="varchar" MaxLength="22" />
+          <Property Name="Unit_of_Issue" Type="varchar" MaxLength="2" />
+          <Property Name="Specification_Number" Type="varchar" MaxLength="256" />
+          <Property Name="Specification_Type_Grade_Class" Type="varchar" MaxLength="256" />
+        </EntityType>
+        <EntityType Name="INV">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CAGE_Code" Type="varchar" MaxLength="5" />
+          <Property Name="Create_Date" Type="varchar" MaxLength="22" />
+          <Property Name="Create_Username" Type="varchar" MaxLength="256" />
+          <Property Name="Disposal_Code" Type="varchar" MaxLength="12" />
+          <Property Name="Hazard_Code" Type="varchar" MaxLength="1" />
+          <Property Name="UoM" Type="varchar" MaxLength="3" />
+          <Property Name="Memo" Type="varchar" MaxLength="256" />
+          <Property Name="Document_Number_Code" Type="varchar" MaxLength="256" />
+          <Property Name="Expiration_Date" Type="varchar" MaxLength="22" />
+          <Property Name="Unit_Price" Type="varchar" MaxLength="13" />
+          <Property Name="Lot_Batch_Number" Type="varchar" MaxLength="22" />
+          <Property Name="Original_Expiration_Date" Type="varchar" MaxLength="22" />
+          <Property Name="Original_Quantity" Type="varchar" MaxLength="13" />
+          <Property Name="Original_UoM" Type="varchar" MaxLength="3" />
+          <Property Name="Product_State_Code" Type="varchar" MaxLength="1" />
+          <Property Name="Quantity" Type="varchar" MaxLength="13" />
+          <Property Name="Status" Type="varchar" MaxLength="2" />
+          <Property Name="Unit_of_Issue" Type="varchar" MaxLength="2" />
+          <Property Name="Issue_Point_Code" Type="varchar" MaxLength="13" />
+          <Property Name="Item_Name" Type="varchar" MaxLength="256" />
+          <Property Name="Kit_Description" Type="varchar" MaxLength="256" />
+          <Property Name="Kit_ID_Code" Type="varchar" MaxLength="13" />
+          <Property Name="Kit_Indicator" Type="varchar" MaxLength="1" />
+          <Property Name="PNI" Type="varchar" MaxLength="1" />
+          <Property Name="Kit_Price" Type="varchar" MaxLength="13" />
+          <Property Name="Manufacturer_Kit_Indicator" Type="varchar" MaxLength="13" />
+          <Property Name="Manufacturer_Name" Type="varchar" MaxLength="256" />
+          <Property Name="Manufacturer_Part_Number" Type="varchar" MaxLength="256" />
+          <Property Name="NSN" Type="varchar" MaxLength="13" />
+          <Property Name="Product_MSDS_Number" Type="varchar" MaxLength="13" />
+          <Property Name="Original_Issuepoint_Code" Type="varchar" MaxLength="13" />
+          <Property Name="Separable" Type="varchar" MaxLength="1" />
+          <Property Name="Serial_Number" Type="varchar" MaxLength="22" />
+          <Property Name="Shelf_Bin" Type="varchar" MaxLength="22" />
+          <Property Name="Trade_Name" Type="varchar" MaxLength="256" />
+          <Property Name="Update_Date" Type="varchar" MaxLength="22" />
+          <Property Name="Updated_By" Type="varchar" MaxLength="256" />
+          <Property Name="Zone_Code" Type="varchar" MaxLength="13" />
+          <Property Name="Shelf_Life_Code" Type="varchar" MaxLength="13" />
+          <Property Name="Kgrams_QTY" Type="varchar" MaxLength="13" />
+          <Property Name="Original_Kgrams_QTY" Type="varchar" MaxLength="13" />
+        </EntityType>
+        <EntityType Name="ISU">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Unit_Price" Type="varchar" MaxLength="13" />
+          <Property Name="Issue_Point_Code" Type="varchar" MaxLength="13" />
+          <Property Name="Date_Out" Type="varchar" MaxLength="22" />
+          <Property Name="NSN" Type="varchar" MaxLength="13" />
+          <Property Name="Building_Code" Type="varchar" MaxLength="13" />
+          <Property Name="Hazard_Code" Type="varchar" MaxLength="1" />
+          <Property Name="Issue_Group_Sequence" Type="varchar" MaxLength="13" />
+          <Property Name="Issue_QTY_Out" Type="varchar" MaxLength="13" />
+          <Property Name="Scale_Indicator" Type="varchar" MaxLength="1" />
+          <Property Name="UoM" Type="varchar" MaxLength="3" />
+          <Property Name="Item_Name" Type="varchar" MaxLength="256" />
+          <Property Name="Memo_Note" Type="varchar" MaxLength="256" />
+          <Property Name="Job_ID_Code" Type="varchar" MaxLength="17" />
+          <Property Name="Weight_Out" Type="varchar" MaxLength="13" />
+          <Property Name="Kit_Indicator" Type="varchar" MaxLength="1" />
+          <Property Name="Pounds_Out_QTY" Type="varchar" MaxLength="13" />
+          <Property Name="Supervisor_Code" Type="varchar" MaxLength="13" />
+          <Property Name="MSDS_Printed_IND" Type="varchar" MaxLength="1" />
+          <Property Name="Serial_Number" Type="varchar" MaxLength="22" />
+          <Property Name="Organization_Code" Type="varchar" MaxLength="256" />
+          <Property Name="Product_MSDS_Number" Type="varchar" MaxLength="13" />
+          <Property Name="ID_Number" Type="varchar" MaxLength="13" />
+          <Property Name="Resource_Name" Type="varchar" MaxLength="256" />
+          <Property Name="Status_Out" Type="varchar" MaxLength="2" />
+          <Property Name="Trade_Name" Type="varchar" MaxLength="256" />
+          <Property Name="Update_Date" Type="varchar" MaxLength="22" />
+          <Property Name="Updated_By" Type="varchar" MaxLength="256" />
+          <Property Name="Zone_Code" Type="varchar" MaxLength="13" />
+          <Property Name="Resource_Out_Cd" Type="varchar" MaxLength="256" />
+        </EntityType>
+        <EntityType Name="LOG">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Status" Type="varchar" MaxLength="15" />
+          <Property Name="Description" Type="varchar" MaxLength="256" />
+          <Property Name="Update_Date" Type="datetime" />
+        </EntityType>
+        <EntityType Name="MXQ">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Zone_Code" Type="varchar" MaxLength="13" />
+          <Property Name="Zone_Description" Type="varchar" MaxLength="256" />
+          <Property Name="NSN" Type="varchar" MaxLength="20" />
+          <Property Name="Building_Code" Type="varchar" MaxLength="256" />
+          <Property Name="Trade_Name" Type="varchar" MaxLength="256" />
+          <Property Name="Item_Name" Type="varchar" MaxLength="256" />
+          <Property Name="Update_Date" Type="varchar" MaxLength="22" />
+          <Property Name="ZQL" Type="varchar" MaxLength="5" />
+        </EntityType>
+        <EntityType Name="NOP">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Backorder_Indicator" Type="varchar" MaxLength="1" />
+          <Property Name="CAGE_Code" Type="varchar" MaxLength="5" />
+          <Property Name="Credit_Card_Code" Type="varchar" MaxLength="256" />
+          <Property Name="Delivery_Destination" Type="varchar" MaxLength="256" />
+          <Property Name="Document_Date" Type="varchar" MaxLength="4" />
+          <Property Name="Document_Serial_Number" Type="varchar" MaxLength="256" />
+          <Property Name="Issue_Exception_Code" Type="varchar" MaxLength="22" />
+          <Property Name="Issue_Point_Code" Type="varchar" MaxLength="13" />
+          <Property Name="Job_Order_Code" Type="varchar" MaxLength="256" />
+          <Property Name="Job_Order_Number" Type="varchar" MaxLength="256" />
+          <Property Name="JOCAS_Number" Type="varchar" MaxLength="256" />
+          <Property Name="Manufacturer_Serial_Number" Type="varchar" MaxLength="256" />
+          <Property Name="NSN" Type="varchar" MaxLength="20" />
+          <Property Name="Order_Activity" Type="varchar" MaxLength="256" />
+          <Property Name="Order_Command_Code" Type="varchar" MaxLength="256" />
+          <Property Name="Order_Comments" Type="varchar" MaxLength="512" />
+          <Property Name="Order_Completion_Date" Type="varchar" MaxLength="22" />
+          <Property Name="Order_Demand_Code" Type="varchar" MaxLength="4" />
+          <Property Name="Order_Document_Number" Type="varchar" MaxLength="22" />
+          <Property Name="Order_Fund_Code" Type="varchar" MaxLength="256" />
+          <Property Name="Order_Priority" Type="varchar" MaxLength="2" />
+          <Property Name="Order_QTY" Type="varchar" MaxLength="13" />
+          <Property Name="Date_Ordered" Type="varchar" MaxLength="22" />
+          <Property Name="Order_Request_Number" Type="varchar" MaxLength="13" />
+          <Property Name="Order_Shop_Code" Type="varchar" MaxLength="256" />
+          <Property Name="Order_Unit_of_Issue" Type="varchar" MaxLength="2" />
+          <Property Name="Order_Urgency" Type="varchar" MaxLength="2" />
+          <Property Name="Projected_Delivery_Code" Type="varchar" MaxLength="256" />
+          <Property Name="Projected_Delivery_Date" Type="varchar" MaxLength="22" />
+          <Property Name="Request_Delete_Date" Type="varchar" MaxLength="22" />
+          <Property Name="Request_Status_Code" Type="varchar" MaxLength="2" />
+          <Property Name="Requisistion_Transaction_Status_Code" Type="varchar" MaxLength="2" />
+          <Property Name="Distribution_Code" Type="varchar" MaxLength="256" />
+          <Property Name="Workorder_Number_Ship_To" Type="varchar" MaxLength="256" />
+          <Property Name="Ship_to_Location" Type="varchar" MaxLength="22" />
+          <Property Name="SRD" Type="varchar" MaxLength="256" />
+          <Property Name="Transaction_Exception_Code" Type="varchar" MaxLength="256" />
+          <Property Name="To_Supply_Date" Type="varchar" MaxLength="22" />
+          <Property Name="TRIC" Type="varchar" MaxLength="3" />
+          <Property Name="UJC" Type="varchar" MaxLength="256" />
+          <Property Name="Update_Date" Type="varchar" MaxLength="22" />
+          <Property Name="Updated_By" Type="varchar" MaxLength="256" />
+          <Property Name="Serial_Number_Count" Type="varchar" MaxLength="22" />
+          <Property Name="Requester_Logon" Type="varchar" MaxLength="256" />
+          <Property Name="Work_Order_Code" Type="varchar" MaxLength="256" />
+          <Property Name="Work_Unit_Code" Type="varchar" MaxLength="256" />
+          <Property Name="Zone_Code" Type="varchar" MaxLength="13" />
+        </EntityType>
+        <EntityType Name="ORD">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Issue_Point_Code" Type="varchar" MaxLength="13" />
+          <Property Name="NSN" Type="varchar" MaxLength="25" />
+          <Property Name="Order_Comments" Type="varchar" MaxLength="512" />
+          <Property Name="Order_QTY" Type="varchar" MaxLength="13" />
+          <Property Name="Date_Ordered" Type="varchar" MaxLength="22" />
+          <Property Name="Order_Request_Number" Type="varchar" MaxLength="13" />
+          <Property Name="Ship_to_Location" Type="varchar" MaxLength="22" />
+          <Property Name="Requester_Logon" Type="varchar" MaxLength="256" />
+          <Property Name="Zone_Code" Type="varchar" MaxLength="13" />
+          <Property Name="Order_Priority" Type="varchar" MaxLength="2" />
+          <Property Name="Job_Order_Number" Type="varchar" MaxLength="256" />
+          <Property Name="Order_Shop_Code" Type="varchar" MaxLength="256" />
+          <Property Name="Order_Unit_of_Issue" Type="varchar" MaxLength="2" />
+          <Property Name="Work_Order_Code" Type="varchar" MaxLength="256" />
+          <Property Name="Job_Order_Code" Type="varchar" MaxLength="256" />
+          <Property Name="Order_Document_Number" Type="varchar" MaxLength="22" />
+          <Property Name="Update_Date" Type="varchar" MaxLength="22" />
+          <Property Name="Updated_By" Type="varchar" MaxLength="256" />
+          <Property Name="Order_Completion_Date" Type="varchar" MaxLength="22" />
+          <Property Name="Request_Status_Code" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="QOH">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Issue_Point_Code" Type="varchar" MaxLength="13" />
+          <Property Name="NSN" Type="varchar" MaxLength="20" />
+          <Property Name="Serial_Number" Type="varchar" MaxLength="22" />
+          <Property Name="Status" Type="varchar" MaxLength="2" />
+        </EntityType>
+        <EntityType Name="TRN">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Received_Date" Type="varchar" MaxLength="22" />
+          <Property Name="Transfer_Date" Type="varchar" MaxLength="22" />
+          <Property Name="Transfer_From_Issue_Point" Type="varchar" MaxLength="13" />
+          <Property Name="Receiving_Issue_Point" Type="varchar" MaxLength="13" />
+          <Property Name="Serial_Number" Type="varchar" MaxLength="22" />
+          <Property Name="Transfer_User_Logon" Type="varchar" MaxLength="256" />
+          <Property Name="Received_User_Logon" Type="varchar" MaxLength="256" />
+        </EntityType>
+        <Function Name="AULCopytoHistory" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="INVCopytoHistory" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="ISUCopytoHistory" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="MXQCopytoHistory" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="ORDCopytoHistory" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="TRNCopytoHistory" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="HMMSModelStoreContainer">
+          <EntitySet Name="AUL" EntityType="Self.AUL" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="INV" EntityType="Self.INV" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ISU" EntityType="Self.ISU" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LOG" EntityType="Self.LOG" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MXQ" EntityType="Self.MXQ" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NOP" EntityType="Self.NOP" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ORD" EntityType="Self.ORD" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="QOH" EntityType="Self.QOH" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TRN" EntityType="Self.TRN" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="HMMSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="AUL">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="Zone_Code" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="Zone_Description" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="NSN" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="Item_Name" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Trade_Name" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Manufacturer_Part_Number" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Product_MSDS_Number" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="MSDS_Prep_Date" Type="String" MaxLength="22" FixedLength="false" Unicode="false" />
+          <Property Name="Authorization_Expiration_Date" Type="String" MaxLength="22" FixedLength="false" Unicode="false" />
+          <Property Name="Update_Date" Type="String" MaxLength="22" FixedLength="false" Unicode="false" />
+          <Property Name="Active" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="CAGE_Code" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="Updated_By" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Building_Code" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="Update_Date_2" Type="String" MaxLength="22" FixedLength="false" Unicode="false" />
+          <Property Name="Unit_of_Issue" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="Specification_Number" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Specification_Type_Grade_Class" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="INV">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="CAGE_Code" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="Create_Date" Type="String" MaxLength="22" FixedLength="false" Unicode="false" />
+          <Property Name="Create_Username" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Disposal_Code" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="Hazard_Code" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="UoM" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="Memo" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Document_Number_Code" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Expiration_Date" Type="String" MaxLength="22" FixedLength="false" Unicode="false" />
+          <Property Name="Unit_Price" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="Lot_Batch_Number" Type="String" MaxLength="22" FixedLength="false" Unicode="false" />
+          <Property Name="Original_Expiration_Date" Type="String" MaxLength="22" FixedLength="false" Unicode="false" />
+          <Property Name="Original_Quantity" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="Original_UoM" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="Product_State_Code" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Quantity" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="Unit_of_Issue" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="Issue_Point_Code" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="Item_Name" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Kit_Description" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Kit_ID_Code" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="Kit_Indicator" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="PNI" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Kit_Price" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="Manufacturer_Kit_Indicator" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="Manufacturer_Name" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Manufacturer_Part_Number" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="NSN" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="Product_MSDS_Number" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="Original_Issuepoint_Code" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="Separable" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Serial_Number" Type="String" MaxLength="22" FixedLength="false" Unicode="false" />
+          <Property Name="Shelf_Bin" Type="String" MaxLength="22" FixedLength="false" Unicode="false" />
+          <Property Name="Trade_Name" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Update_Date" Type="String" MaxLength="22" FixedLength="false" Unicode="false" />
+          <Property Name="Updated_By" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Zone_Code" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="Shelf_Life_Code" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="Kgrams_QTY" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="Original_Kgrams_QTY" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="ISU">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="Unit_Price" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="Issue_Point_Code" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="Date_Out" Type="String" MaxLength="22" FixedLength="false" Unicode="false" />
+          <Property Name="NSN" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="Building_Code" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="Hazard_Code" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Issue_Group_Sequence" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="Issue_QTY_Out" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="Scale_Indicator" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="UoM" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="Item_Name" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Memo_Note" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Job_ID_Code" Type="String" MaxLength="17" FixedLength="false" Unicode="false" />
+          <Property Name="Weight_Out" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="Kit_Indicator" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Pounds_Out_QTY" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="Supervisor_Code" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="MSDS_Printed_IND" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Serial_Number" Type="String" MaxLength="22" FixedLength="false" Unicode="false" />
+          <Property Name="Organization_Code" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Product_MSDS_Number" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="ID_Number" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="Resource_Name" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Status_Out" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="Trade_Name" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Update_Date" Type="String" MaxLength="22" FixedLength="false" Unicode="false" />
+          <Property Name="Updated_By" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Zone_Code" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="Resource_Out_Cd" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="MXQ">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="Zone_Code" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="Zone_Description" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="NSN" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Building_Code" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Trade_Name" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Item_Name" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Update_Date" Type="String" MaxLength="22" FixedLength="false" Unicode="false" />
+          <Property Name="ZQL" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="NOP">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="Backorder_Indicator" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="CAGE_Code" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="Credit_Card_Code" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Delivery_Destination" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Document_Date" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="Document_Serial_Number" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Issue_Exception_Code" Type="String" MaxLength="22" FixedLength="false" Unicode="false" />
+          <Property Name="Issue_Point_Code" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="Job_Order_Code" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Job_Order_Number" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="JOCAS_Number" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Manufacturer_Serial_Number" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="NSN" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Order_Activity" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Order_Command_Code" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Order_Comments" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Name="Order_Completion_Date" Type="String" MaxLength="22" FixedLength="false" Unicode="false" />
+          <Property Name="Order_Demand_Code" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="Order_Document_Number" Type="String" MaxLength="22" FixedLength="false" Unicode="false" />
+          <Property Name="Order_Fund_Code" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Order_Priority" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="Order_QTY" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="Date_Ordered" Type="String" MaxLength="22" FixedLength="false" Unicode="false" />
+          <Property Name="Order_Request_Number" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="Order_Shop_Code" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Order_Unit_of_Issue" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="Order_Urgency" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="Projected_Delivery_Code" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Projected_Delivery_Date" Type="String" MaxLength="22" FixedLength="false" Unicode="false" />
+          <Property Name="Request_Delete_Date" Type="String" MaxLength="22" FixedLength="false" Unicode="false" />
+          <Property Name="Request_Status_Code" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="Requisistion_Transaction_Status_Code" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="Distribution_Code" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Workorder_Number_Ship_To" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Ship_to_Location" Type="String" MaxLength="22" FixedLength="false" Unicode="false" />
+          <Property Name="SRD" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Transaction_Exception_Code" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="To_Supply_Date" Type="String" MaxLength="22" FixedLength="false" Unicode="false" />
+          <Property Name="TRIC" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="UJC" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Update_Date" Type="String" MaxLength="22" FixedLength="false" Unicode="false" />
+          <Property Name="Updated_By" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Serial_Number_Count" Type="String" MaxLength="22" FixedLength="false" Unicode="false" />
+          <Property Name="Requester_Logon" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Work_Order_Code" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Work_Unit_Code" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Zone_Code" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="ORD">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="Issue_Point_Code" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="NSN" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="Order_Comments" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Name="Order_QTY" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="Date_Ordered" Type="String" MaxLength="22" FixedLength="false" Unicode="false" />
+          <Property Name="Order_Request_Number" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="Ship_to_Location" Type="String" MaxLength="22" FixedLength="false" Unicode="false" />
+          <Property Name="Requester_Logon" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Zone_Code" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="Order_Priority" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="Job_Order_Number" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Order_Shop_Code" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Order_Unit_of_Issue" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="Work_Order_Code" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Job_Order_Code" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Order_Document_Number" Type="String" MaxLength="22" FixedLength="false" Unicode="false" />
+          <Property Name="Update_Date" Type="String" MaxLength="22" FixedLength="false" Unicode="false" />
+          <Property Name="Updated_By" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Order_Completion_Date" Type="String" MaxLength="22" FixedLength="false" Unicode="false" />
+          <Property Name="Request_Status_Code" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="QOH">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="Issue_Point_Code" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="NSN" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Serial_Number" Type="String" MaxLength="22" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TRN">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="Received_Date" Type="String" MaxLength="22" FixedLength="false" Unicode="false" />
+          <Property Name="Transfer_Date" Type="String" MaxLength="22" FixedLength="false" Unicode="false" />
+          <Property Name="Transfer_From_Issue_Point" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="Receiving_Issue_Point" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="Serial_Number" Type="String" MaxLength="22" FixedLength="false" Unicode="false" />
+          <Property Name="Transfer_User_Logon" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Received_User_Logon" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="HMMSEntitiesDB" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="AULs" EntityType="Self.AUL" />
+          <EntitySet Name="INVs" EntityType="Self.INV" />
+          <EntitySet Name="ISUs" EntityType="Self.ISU" />
+          <EntitySet Name="MXQs" EntityType="Self.MXQ" />
+          <EntitySet Name="NOPs" EntityType="Self.NOP" />
+          <EntitySet Name="ORDs" EntityType="Self.ORD" />
+          <EntitySet Name="QOHs" EntityType="Self.QOH" />
+          <EntitySet Name="TRNs" EntityType="Self.TRN" />
+          <FunctionImport Name="AULCopytoHistory" />
+          <FunctionImport Name="INVCopytoHistory" />
+          <FunctionImport Name="ISUCopytoHistory" />
+          <FunctionImport Name="MXQCopytoHistory" />
+          <FunctionImport Name="NOPCopytoHistory" />
+          <FunctionImport Name="ORDCopytoHistory" />
+          <FunctionImport Name="QOHCopytoHistory" />
+          <FunctionImport Name="TRNCopytoHistory" />
+          <EntitySet Name="LOGs" EntityType="HMMSModel.LOG" />
+        </EntityContainer>
+        <EntityType Name="LOG">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="Status" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Update_Date" Type="DateTime" Precision="3" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="HMMSModelStoreContainer" CdmEntityContainer="HMMSEntitiesDB">
+          <EntitySetMapping Name="AULs">
+            <EntityTypeMapping TypeName="HMMSModel.AUL">
+              <MappingFragment StoreEntitySet="AUL">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Zone_Code" ColumnName="Zone_Code" />
+                <ScalarProperty Name="Zone_Description" ColumnName="Zone_Description" />
+                <ScalarProperty Name="NSN" ColumnName="NSN" />
+                <ScalarProperty Name="Item_Name" ColumnName="Item_Name" />
+                <ScalarProperty Name="Trade_Name" ColumnName="Trade_Name" />
+                <ScalarProperty Name="Manufacturer_Part_Number" ColumnName="Manufacturer_Part_Number" />
+                <ScalarProperty Name="Product_MSDS_Number" ColumnName="Product_MSDS_Number" />
+                <ScalarProperty Name="MSDS_Prep_Date" ColumnName="MSDS_Prep_Date" />
+                <ScalarProperty Name="Authorization_Expiration_Date" ColumnName="Authorization_Expiration_Date" />
+                <ScalarProperty Name="Update_Date" ColumnName="Update_Date" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="CAGE_Code" ColumnName="CAGE_Code" />
+                <ScalarProperty Name="Updated_By" ColumnName="Updated_By" />
+                <ScalarProperty Name="Building_Code" ColumnName="Building_Code" />
+                <ScalarProperty Name="Update_Date_2" ColumnName="Update_Date_2" />
+                <ScalarProperty Name="Unit_of_Issue" ColumnName="Unit_of_Issue" />
+                <ScalarProperty Name="Specification_Number" ColumnName="Specification_Number" />
+                <ScalarProperty Name="Specification_Type_Grade_Class" ColumnName="Specification_Type_Grade_Class" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="INVs">
+            <EntityTypeMapping TypeName="HMMSModel.INV">
+              <MappingFragment StoreEntitySet="INV">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CAGE_Code" ColumnName="CAGE_Code" />
+                <ScalarProperty Name="Create_Date" ColumnName="Create_Date" />
+                <ScalarProperty Name="Create_Username" ColumnName="Create_Username" />
+                <ScalarProperty Name="Disposal_Code" ColumnName="Disposal_Code" />
+                <ScalarProperty Name="Hazard_Code" ColumnName="Hazard_Code" />
+                <ScalarProperty Name="UoM" ColumnName="UoM" />
+                <ScalarProperty Name="Memo" ColumnName="Memo" />
+                <ScalarProperty Name="Document_Number_Code" ColumnName="Document_Number_Code" />
+                <ScalarProperty Name="Expiration_Date" ColumnName="Expiration_Date" />
+                <ScalarProperty Name="Unit_Price" ColumnName="Unit_Price" />
+                <ScalarProperty Name="Lot_Batch_Number" ColumnName="Lot_Batch_Number" />
+                <ScalarProperty Name="Original_Expiration_Date" ColumnName="Original_Expiration_Date" />
+                <ScalarProperty Name="Original_Quantity" ColumnName="Original_Quantity" />
+                <ScalarProperty Name="Original_UoM" ColumnName="Original_UoM" />
+                <ScalarProperty Name="Product_State_Code" ColumnName="Product_State_Code" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Unit_of_Issue" ColumnName="Unit_of_Issue" />
+                <ScalarProperty Name="Issue_Point_Code" ColumnName="Issue_Point_Code" />
+                <ScalarProperty Name="Item_Name" ColumnName="Item_Name" />
+                <ScalarProperty Name="Kit_Description" ColumnName="Kit_Description" />
+                <ScalarProperty Name="Kit_ID_Code" ColumnName="Kit_ID_Code" />
+                <ScalarProperty Name="Kit_Indicator" ColumnName="Kit_Indicator" />
+                <ScalarProperty Name="PNI" ColumnName="PNI" />
+                <ScalarProperty Name="Kit_Price" ColumnName="Kit_Price" />
+                <ScalarProperty Name="Manufacturer_Kit_Indicator" ColumnName="Manufacturer_Kit_Indicator" />
+                <ScalarProperty Name="Manufacturer_Name" ColumnName="Manufacturer_Name" />
+                <ScalarProperty Name="Manufacturer_Part_Number" ColumnName="Manufacturer_Part_Number" />
+                <ScalarProperty Name="NSN" ColumnName="NSN" />
+                <ScalarProperty Name="Product_MSDS_Number" ColumnName="Product_MSDS_Number" />
+                <ScalarProperty Name="Original_Issuepoint_Code" ColumnName="Original_Issuepoint_Code" />
+                <ScalarProperty Name="Separable" ColumnName="Separable" />
+                <ScalarProperty Name="Serial_Number" ColumnName="Serial_Number" />
+                <ScalarProperty Name="Shelf_Bin" ColumnName="Shelf_Bin" />
+                <ScalarProperty Name="Trade_Name" ColumnName="Trade_Name" />
+                <ScalarProperty Name="Update_Date" ColumnName="Update_Date" />
+                <ScalarProperty Name="Updated_By" ColumnName="Updated_By" />
+                <ScalarProperty Name="Zone_Code" ColumnName="Zone_Code" />
+                <ScalarProperty Name="Shelf_Life_Code" ColumnName="Shelf_Life_Code" />
+                <ScalarProperty Name="Kgrams_QTY" ColumnName="Kgrams_QTY" />
+                <ScalarProperty Name="Original_Kgrams_QTY" ColumnName="Original_Kgrams_QTY" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ISUs">
+            <EntityTypeMapping TypeName="HMMSModel.ISU">
+              <MappingFragment StoreEntitySet="ISU">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Unit_Price" ColumnName="Unit_Price" />
+                <ScalarProperty Name="Issue_Point_Code" ColumnName="Issue_Point_Code" />
+                <ScalarProperty Name="Date_Out" ColumnName="Date_Out" />
+                <ScalarProperty Name="NSN" ColumnName="NSN" />
+                <ScalarProperty Name="Building_Code" ColumnName="Building_Code" />
+                <ScalarProperty Name="Hazard_Code" ColumnName="Hazard_Code" />
+                <ScalarProperty Name="Issue_Group_Sequence" ColumnName="Issue_Group_Sequence" />
+                <ScalarProperty Name="Issue_QTY_Out" ColumnName="Issue_QTY_Out" />
+                <ScalarProperty Name="Scale_Indicator" ColumnName="Scale_Indicator" />
+                <ScalarProperty Name="UoM" ColumnName="UoM" />
+                <ScalarProperty Name="Item_Name" ColumnName="Item_Name" />
+                <ScalarProperty Name="Memo_Note" ColumnName="Memo_Note" />
+                <ScalarProperty Name="Job_ID_Code" ColumnName="Job_ID_Code" />
+                <ScalarProperty Name="Weight_Out" ColumnName="Weight_Out" />
+                <ScalarProperty Name="Kit_Indicator" ColumnName="Kit_Indicator" />
+                <ScalarProperty Name="Pounds_Out_QTY" ColumnName="Pounds_Out_QTY" />
+                <ScalarProperty Name="Supervisor_Code" ColumnName="Supervisor_Code" />
+                <ScalarProperty Name="MSDS_Printed_IND" ColumnName="MSDS_Printed_IND" />
+                <ScalarProperty Name="Serial_Number" ColumnName="Serial_Number" />
+                <ScalarProperty Name="Organization_Code" ColumnName="Organization_Code" />
+                <ScalarProperty Name="Product_MSDS_Number" ColumnName="Product_MSDS_Number" />
+                <ScalarProperty Name="ID_Number" ColumnName="ID_Number" />
+                <ScalarProperty Name="Resource_Name" ColumnName="Resource_Name" />
+                <ScalarProperty Name="Status_Out" ColumnName="Status_Out" />
+                <ScalarProperty Name="Trade_Name" ColumnName="Trade_Name" />
+                <ScalarProperty Name="Update_Date" ColumnName="Update_Date" />
+                <ScalarProperty Name="Updated_By" ColumnName="Updated_By" />
+                <ScalarProperty Name="Zone_Code" ColumnName="Zone_Code" />
+                <ScalarProperty Name="Resource_Out_Cd" ColumnName="Resource_Out_Cd" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MXQs">
+            <EntityTypeMapping TypeName="HMMSModel.MXQ">
+              <MappingFragment StoreEntitySet="MXQ">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Zone_Code" ColumnName="Zone_Code" />
+                <ScalarProperty Name="Zone_Description" ColumnName="Zone_Description" />
+                <ScalarProperty Name="NSN" ColumnName="NSN" />
+                <ScalarProperty Name="Building_Code" ColumnName="Building_Code" />
+                <ScalarProperty Name="Trade_Name" ColumnName="Trade_Name" />
+                <ScalarProperty Name="Item_Name" ColumnName="Item_Name" />
+                <ScalarProperty Name="Update_Date" ColumnName="Update_Date" />
+                <ScalarProperty Name="ZQL" ColumnName="ZQL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NOPs">
+            <EntityTypeMapping TypeName="HMMSModel.NOP">
+              <MappingFragment StoreEntitySet="NOP">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Backorder_Indicator" ColumnName="Backorder_Indicator" />
+                <ScalarProperty Name="CAGE_Code" ColumnName="CAGE_Code" />
+                <ScalarProperty Name="Credit_Card_Code" ColumnName="Credit_Card_Code" />
+                <ScalarProperty Name="Delivery_Destination" ColumnName="Delivery_Destination" />
+                <ScalarProperty Name="Document_Date" ColumnName="Document_Date" />
+                <ScalarProperty Name="Document_Serial_Number" ColumnName="Document_Serial_Number" />
+                <ScalarProperty Name="Issue_Exception_Code" ColumnName="Issue_Exception_Code" />
+                <ScalarProperty Name="Issue_Point_Code" ColumnName="Issue_Point_Code" />
+                <ScalarProperty Name="Job_Order_Code" ColumnName="Job_Order_Code" />
+                <ScalarProperty Name="Job_Order_Number" ColumnName="Job_Order_Number" />
+                <ScalarProperty Name="JOCAS_Number" ColumnName="JOCAS_Number" />
+                <ScalarProperty Name="Manufacturer_Serial_Number" ColumnName="Manufacturer_Serial_Number" />
+                <ScalarProperty Name="NSN" ColumnName="NSN" />
+                <ScalarProperty Name="Order_Activity" ColumnName="Order_Activity" />
+                <ScalarProperty Name="Order_Command_Code" ColumnName="Order_Command_Code" />
+                <ScalarProperty Name="Order_Comments" ColumnName="Order_Comments" />
+                <ScalarProperty Name="Order_Completion_Date" ColumnName="Order_Completion_Date" />
+                <ScalarProperty Name="Order_Demand_Code" ColumnName="Order_Demand_Code" />
+                <ScalarProperty Name="Order_Document_Number" ColumnName="Order_Document_Number" />
+                <ScalarProperty Name="Order_Fund_Code" ColumnName="Order_Fund_Code" />
+                <ScalarProperty Name="Order_Priority" ColumnName="Order_Priority" />
+                <ScalarProperty Name="Order_QTY" ColumnName="Order_QTY" />
+                <ScalarProperty Name="Date_Ordered" ColumnName="Date_Ordered" />
+                <ScalarProperty Name="Order_Request_Number" ColumnName="Order_Request_Number" />
+                <ScalarProperty Name="Order_Shop_Code" ColumnName="Order_Shop_Code" />
+                <ScalarProperty Name="Order_Unit_of_Issue" ColumnName="Order_Unit_of_Issue" />
+                <ScalarProperty Name="Order_Urgency" ColumnName="Order_Urgency" />
+                <ScalarProperty Name="Projected_Delivery_Code" ColumnName="Projected_Delivery_Code" />
+                <ScalarProperty Name="Projected_Delivery_Date" ColumnName="Projected_Delivery_Date" />
+                <ScalarProperty Name="Request_Delete_Date" ColumnName="Request_Delete_Date" />
+                <ScalarProperty Name="Request_Status_Code" ColumnName="Request_Status_Code" />
+                <ScalarProperty Name="Requisistion_Transaction_Status_Code" ColumnName="Requisistion_Transaction_Status_Code" />
+                <ScalarProperty Name="Distribution_Code" ColumnName="Distribution_Code" />
+                <ScalarProperty Name="Workorder_Number_Ship_To" ColumnName="Workorder_Number_Ship_To" />
+                <ScalarProperty Name="Ship_to_Location" ColumnName="Ship_to_Location" />
+                <ScalarProperty Name="SRD" ColumnName="SRD" />
+                <ScalarProperty Name="Transaction_Exception_Code" ColumnName="Transaction_Exception_Code" />
+                <ScalarProperty Name="To_Supply_Date" ColumnName="To_Supply_Date" />
+                <ScalarProperty Name="TRIC" ColumnName="TRIC" />
+                <ScalarProperty Name="UJC" ColumnName="UJC" />
+                <ScalarProperty Name="Update_Date" ColumnName="Update_Date" />
+                <ScalarProperty Name="Updated_By" ColumnName="Updated_By" />
+                <ScalarProperty Name="Serial_Number_Count" ColumnName="Serial_Number_Count" />
+                <ScalarProperty Name="Requester_Logon" ColumnName="Requester_Logon" />
+                <ScalarProperty Name="Work_Order_Code" ColumnName="Work_Order_Code" />
+                <ScalarProperty Name="Work_Unit_Code" ColumnName="Work_Unit_Code" />
+                <ScalarProperty Name="Zone_Code" ColumnName="Zone_Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ORDs">
+            <EntityTypeMapping TypeName="HMMSModel.ORD">
+              <MappingFragment StoreEntitySet="ORD">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Issue_Point_Code" ColumnName="Issue_Point_Code" />
+                <ScalarProperty Name="NSN" ColumnName="NSN" />
+                <ScalarProperty Name="Order_Comments" ColumnName="Order_Comments" />
+                <ScalarProperty Name="Order_QTY" ColumnName="Order_QTY" />
+                <ScalarProperty Name="Date_Ordered" ColumnName="Date_Ordered" />
+                <ScalarProperty Name="Order_Request_Number" ColumnName="Order_Request_Number" />
+                <ScalarProperty Name="Ship_to_Location" ColumnName="Ship_to_Location" />
+                <ScalarProperty Name="Requester_Logon" ColumnName="Requester_Logon" />
+                <ScalarProperty Name="Zone_Code" ColumnName="Zone_Code" />
+                <ScalarProperty Name="Order_Priority" ColumnName="Order_Priority" />
+                <ScalarProperty Name="Job_Order_Number" ColumnName="Job_Order_Number" />
+                <ScalarProperty Name="Order_Shop_Code" ColumnName="Order_Shop_Code" />
+                <ScalarProperty Name="Order_Unit_of_Issue" ColumnName="Order_Unit_of_Issue" />
+                <ScalarProperty Name="Work_Order_Code" ColumnName="Work_Order_Code" />
+                <ScalarProperty Name="Job_Order_Code" ColumnName="Job_Order_Code" />
+                <ScalarProperty Name="Order_Document_Number" ColumnName="Order_Document_Number" />
+                <ScalarProperty Name="Update_Date" ColumnName="Update_Date" />
+                <ScalarProperty Name="Updated_By" ColumnName="Updated_By" />
+                <ScalarProperty Name="Order_Completion_Date" ColumnName="Order_Completion_Date" />
+                <ScalarProperty Name="Request_Status_Code" ColumnName="Request_Status_Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="QOHs">
+            <EntityTypeMapping TypeName="HMMSModel.QOH">
+              <MappingFragment StoreEntitySet="QOH">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Issue_Point_Code" ColumnName="Issue_Point_Code" />
+                <ScalarProperty Name="NSN" ColumnName="NSN" />
+                <ScalarProperty Name="Serial_Number" ColumnName="Serial_Number" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TRNs">
+            <EntityTypeMapping TypeName="HMMSModel.TRN">
+              <MappingFragment StoreEntitySet="TRN">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Received_Date" ColumnName="Received_Date" />
+                <ScalarProperty Name="Transfer_Date" ColumnName="Transfer_Date" />
+                <ScalarProperty Name="Transfer_From_Issue_Point" ColumnName="Transfer_From_Issue_Point" />
+                <ScalarProperty Name="Receiving_Issue_Point" ColumnName="Receiving_Issue_Point" />
+                <ScalarProperty Name="Serial_Number" ColumnName="Serial_Number" />
+                <ScalarProperty Name="Transfer_User_Logon" ColumnName="Transfer_User_Logon" />
+                <ScalarProperty Name="Received_User_Logon" ColumnName="Received_User_Logon" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="AULCopytoHistory" FunctionName="HMMSModel.Store.AULCopytoHistory" />
+          <FunctionImportMapping FunctionImportName="INVCopytoHistory" FunctionName="HMMSModel.Store.INVCopytoHistory" />
+          <FunctionImportMapping FunctionImportName="ISUCopytoHistory" FunctionName="HMMSModel.Store.ISUCopytoHistory" />
+          <FunctionImportMapping FunctionImportName="MXQCopytoHistory" FunctionName="HMMSModel.Store.MXQCopytoHistory" />
+          <FunctionImportMapping FunctionImportName="ORDCopytoHistory" FunctionName="HMMSModel.Store.ORDCopytoHistory" />
+          <FunctionImportMapping FunctionImportName="TRNCopytoHistory" FunctionName="HMMSModel.Store.TRNCopytoHistory" />
+          <EntitySetMapping Name="LOGs">
+            <EntityTypeMapping TypeName="HMMSModel.LOG">
+              <MappingFragment StoreEntitySet="LOG">
+                <ScalarProperty Name="Update_Date" ColumnName="Update_Date" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
